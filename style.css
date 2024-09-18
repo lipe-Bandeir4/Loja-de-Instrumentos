@@ -1,0 +1,862 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+/********************************************/
+/**                 HEADER                 **/
+/********************************************/
+img {
+    padding: 20px;
+}
+
+.suporte {
+    display: flex;
+    /*define o layout como flecivél, permitindo que os elementos folhoes sejam dispostos em uma linha ou coluna*/
+    align-items: center;
+    /*alinha os elentos filhos verticalmente no centro*/
+    height: 200px;
+    /*definea altura do elemento para 200 px*/
+}
+
+.suportecliente {
+    display: flex;
+    /*define o layout como flexivéçl*/
+    align-items: center;
+    color: white;
+    padding-right: 5px;
+    /*Adiciona um espaçamento de 10 pixels a direita do elemento*/
+}
+
+.logo {
+    display: flex;
+    justify-content: end;
+    /*Alinha os elementos filhos horizontais (direita).*/
+    align-items: center;
+    padding-left: 250px;
+    /*Add um espaçameto de 300 pixels a direita do elemento*/
+}
+
+.alinhar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-left: 300px;
+}
+
+/********************************************/
+/**                 HEADER                 **/
+/********************************************/
+
+.menuh {
+    list-style: none;
+    /*Remover a formatação de lista*/
+    padding: 20px 2px 20px 20px;
+    /*Add um espaçamento de 20px em cima e em baixo e 0px nas lateras*/
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+
+}
+
+.menuh li {
+    display: inline;
+    /*Faz com que os elementos sejam exibidos lado a lado*/
+
+}
+
+.menuh li a {
+    color: white;
+    padding: 20px;
+    display: flex;
+    display: inline;
+    font-size: 1.3rem;
+    /*Define o tamanho da fonte como 1.3 vezes o tamanho padrão*/
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    /*Definir o peso da fonte como 600*/
+    text-decoration: none;
+    text-transform: uppercase;
+    /*Transforna o texto em maiusculo*/
+    position: relative;
+    /*Define a posição do elemento como relativa*/
+}
+
+.menuh a::after {
+    /*Definir um estilo para o pseudo elemento  ::after dos links (a) detro de elementos com a classe menuh*/
+    content: '';
+    /*Defini o conteudo do pseudo elemnto como vazio*/
+    width: 1.5rem;
+    height: 1px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    /*define a posição do pseudo elemento como absoluto*/
+    bottom: 2px;
+    /*Definir a posição do pseudo-elemento com 3px abaixo do elemento pai*/
+    left: 50%;
+    /*Definir a poseção do peudo elemento como 50% da esquerdsa do elemento pai*/
+    transform: translate(-50%, 50%);
+    /*Define a transformação do pseudo elemento como uma translação de -50% a esquerda e 50% para cima*/
+    opacity: 0;
+    /*Definido a opacidade do pseudo elemeto como 0 (que o torna inivsível)*/
+    transition: all 0.3s ease; //*Defini a transição do pseudo elemento comm uma naimação de 0.3s com efeito ease*/
+
+}
+
+.menuh a:hover::after {
+    opacity: 9;
+    /*Definido a opacidade do pseudo elemeto como 1 (inivsível)*/
+}
+
+.menuh a:hover {
+    color: #000000;
+}
+
+/********************************************/
+/**          INICIA-SE O BANNER            **/
+/********************************************/
+
+.banner {
+    background-image: linear-gradient(50deg, #000000, #00000020), url('image/g.png');
+    /*define a imagem do fundo como uma gradietne de preto e preto claro e uma imagem de capa*/
+    height: 700px;
+    background-size: cover;
+    right: 150px;
+    padding: 400px 650px 0px 10px;
+    background-position: center;
+}
+
+.txtbanner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.txtbanner p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    /*Add um espaçamento de 1rem embaixo do paragrafo*/
+    font-weight: 500;
+}
+
+.txtbanner h2 {
+    color: white;
+    /*Define a cor*/
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.txtbanner a {
+    margin-top: 2rem;
+    /*Add um espaçamento de 2 rem em cima do link*/
+    text-decoration: none;
+    /*Remover as formações de sublinhado*/
+    color: black;
+    background-color: white;
+    display: inline-block;
+    /*Defini o layout do link com branco*/
+    padding: 1rem 3rem;
+    /*Add um espaçamento de 1 rem em cima e em baixo e 3rem a esquerda e a direita */
+    border-radius: 3rem;
+    /*Definir a borda do link com um arredondamento de 3rem*/
+
+}
+
+/********************************************/
+/**      CONTEÚDO DO MAIN PRINCIPAL        **/
+/********************************************/
+.main-conteudo {
+    background-color: rgb(0, 0, 0);
+}
+
+/*******************************************/
+/**                 TAGS                   **/
+/********************************************/
+
+
+.base-conteudo {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    /*Define um modelo de grade com 4 colunas com larguras iguais*/
+    gap: 3rem;
+    /*Adiciona espaço de 3 rem entre as células da grade usando gap*/
+    padding: 3rem 0;
+
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 20px;
+    gap: 0.5rem;
+    width: 300px;
+    background-color: white;
+    padding: 0;
+    box-shadow: 10px 5px 5px rgb(19, 19, 19);
+}
+
+.conteudo {
+    display: flex;
+    
+    /*Define a direção flexivel para a coluna usando flex-direction*/
+    gap: 0.5rem;
+
+}
+
+.conteudo span {
+    font-weight: 700;
+    /*Defini o peso da fonte para 700 usando font-weight*/
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.conteudo p {
+    color: #777;
+    font-weight: 400;
+}
+
+/*******************************************/
+/**                 SOBRE                  **/
+/********************************************/
+
+.titulosobre {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+.just {
+    display: flex;
+    justify-items: center;
+    padding: 50px 150px 50px 150px;
+
+}
+
+.texto {
+    font-size: 14px;
+    text-align: justify;
+    align-items: center;
+    font-family: 'Cambria, Cochin, Georgia, Times, Times New Roman, serif';
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    color: white;
+}
+
+
+
+/*******************************************/
+/**                 DESTAQUES              **/
+/********************************************/
+.tipo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.conteiner-categoria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(3rem);
+
+
+}
+
+.card-categoria {
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    gap: 1rem;
+}
+
+.categoria-explorer {
+    background-image: linear-gradient(#00000000, #00000080), url('image/explorerD.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 350px;
+
+}
+
+.categoria-gibson {
+    background-image: linear-gradient(#00000000, #00000080), url('image/gibson.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 350px;
+
+}
+
+.categoria-baixo {
+    background-image: linear-gradient(#00000000, #00000080), url('image/baixoF.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 350px;
+
+}
+
+.categoria-ampli {
+    background-image: linear-gradient(#00000000, #00000080), url('image/Marshall.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 350px;
+
+}
+
+.categoria-violao{
+    background-image: linear-gradient(#00000000, #00000080), url('image/violaoF.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 350px;
+
+}
+
+.categoria-pedal {
+    background-image: linear-gradient(#00000000, #00000080), url('image/Pedais\ de\ Efeito\ e\ Pedaleira\ Guitarra\ 3.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 350px;
+
+}
+
+.card-categoria p {
+    font-size: 2.5rem;
+    color: white;
+    text-transform: capitalize;
+    /*Coloca a primeira lettra do texto em maiuscula*/
+    position: relative;
+    /*Define a poseção dos <p> elementos como relativo, o que faz com que nos permite posicionar o pseudoelemento ::after de forma absoluta */
+}
+
+.card-categoria p::after {
+    content: '';
+    /*Defini o conteudo do pseudoelemento como uma string vazia necessaria para criar o pseudoelemento*/
+    width: 2.5rem;
+    height: 2px;
+    background-color: white;
+    position: absolute; /*Defini a poseção do pseudoelemnto como absoluto, o que nos permite posiciona-lo em relação ao seu elemento pai*/
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    
+}
+
+.card-categoria span{
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer; /*Defini o formato do cursos com uma mão apontando ao passar o mouse sobre os span*/
+}
+.card-categoria span:hover{ /*o Hove rusa para mudar a cor onde vc passa o mouse*/
+    color: white;
+
+}
+/*******************************************/
+/**           MELHORES PRODUTOS           **/
+/*******************************************/
+
+.top-produtos{
+    display: flex;
+    flex-direction: column; /*Direlçao dos itens é vertical (coluna)*/
+    gap: 2rem; /*Espaçamento entre os elementos filhos*/
+    margin-bottom: 3rem;
+
+}
+.container-options{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem; 
+}
+.container-options span{
+    color: #777;
+    background-color: #fff;
+    padding: 0.7rem 3rem ; /*ESpaçamento interno com 0.7 na parte superior e infeiror e 3 rem na direira e esquerda*/
+    font-size: 1.4rem;/*Tamanho da font*/
+    text-transform: capitalize;/*deixa em maiusculo a primeira letra de cada palavra*/
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.container-options span:hover{
+    background-color: #5d5b5b;
+    color: white;
+    }
+
+.container-options span.active{
+    background-color: #5d5b5b;
+    color: white;
+}
+
+/*******************************************/
+/**               PRODUTOS                **/
+/*******************************************/
+
+.heading-1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.container-produtos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);/*Mantém 4 colunas em linha*/
+    gap: 1rem;
+    margin: 0px 50px 50px 50px;
+
+}
+.card-product{
+    background-color: white;
+    padding: 1.5rem 2rem;/*Diminuir o padding pra ajustar o tamanho*/
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    width: 100%;/*Garante que o caed ocupa a largura da coluna*/
+}
+
+.container-img{
+    position: relative;
+
+}
+.container-img img{
+    width: 100%;
+}
+.center h3{
+    margin-left: 25px;
+}
+.center p{
+    margin-left: 80px;
+} 
+.morep{
+    margin-right: 10px;
+}
+button{
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    margin-left: 80px;
+    background-color: #000;
+    color: white;
+    margin-top: 20px;
+} 
+button:hover{
+    cursor: pointer;
+    background-color: rgb(19, 49, 61);
+    color: rgb(241, 178, 178);
+}
+
+/*****************************************FEITO OU ANIMAÇÃO BOTÃO*********************************/
+.button-group{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;/*Posição absoluta ara posicinamento especifico, vai manter na posição independente */
+    top: 0;/*Alinhamento no topo*/
+    right: -3rem;/*Alinhamento a direita*/
+    z-index: -1;/*Defini a sobreposição inicial*/
+    transition: all 0.4s ease;/*Animação de transição suave*/
+
+}
+h1{
+    color: white;
+    text-align: center;
+}
+.buttonTP{
+    background-color:white;
+    color: black;
+    margin-left: 200px;
+}
+
+
+/************************************FOOTER****************************/
+
+.footer {
+	background-color: #212121;
+}
+
+.container-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding: 3rem;
+	background-color: #151515;
+}
+
+.menu-footer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr) 30rem;
+	gap: 3rem;
+	justify-items: center;
+}
+
+.title-footer {
+	font-weight: 600;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+    color: white;
+}
+
+.contact-info,
+.information,
+.my-account,
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+	list-style: none;
+	color: #ffffff;
+	font-size: 0.9rem;
+	font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+	color: black;
+}
+
+.social-icons {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.social-icons span {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-icons span i {
+	color: #fff;
+	font-size: 1.4rem;
+}
+
+
+
+.content p {
+	font-size: 0.8rem;
+	color: #fff;
+	font-weight: 300;
+}
+
+.content input {
+	outline: none;
+	background: none;
+	border: none;
+	border-bottom: 4px solid #d2b495;
+	cursor: pointer;
+	padding: 0.5rem 0 1.2rem;
+	color: black;
+	display: block;
+	margin-bottom: 3rem;
+	margin-top: 2rem;
+	width: 100%;
+	font-family: inherit;
+}
+
+.content input::-webkit-input-placeholder {
+	color: #eee;
+}
+
+.content button i{
+	border: none;
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 1rem 3rem;
+	border-radius: 4rem;
+	font-size: 0.9rem;
+	font-family: inherit;
+	cursor: pointer;
+	font-weight: 400;
+}
+
+.content button i:hover {
+	background-color:#695A49;
+	color: white;
+}
+
+.copyright {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 2rem;
+	border-top: 1px solid #d2b495;
+	justify-content: center;
+	align-items: center;
+    color: white;
+}
+
+.copyright p {
+	font-weight: 400;
+	font-size: 1.1rem;
+}
+
+/* ************ */
+/*       MEDIA QUERIES -- 768px       */
+/* ************ */
+@media (max-width: 768px) {
+	html {
+		font-size: 55%;
+	}
+
+	.hero {
+		padding: 2rem;
+	}
+
+	.customer-support {
+		display: none;
+	}
+
+	.content-shopping-cart {
+		display: none;
+	}
+
+	.navbar {
+		padding: 1rem 2rem;
+	}
+
+	.navbar .fa-bars {
+		display: block;
+		color: #fff;
+		font-size: 3rem;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.content-banner {
+		max-width: 50rem;
+		margin: 0 auto;
+		padding: 25rem 0;
+	}
+
+	.container-features {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 3rem 2rem;
+	}
+
+	.card-feature {
+		padding: 2rem;
+	}
+
+	.heading-1 {
+		font-size: 2.4rem;
+	}
+
+	.card-category {
+		height: 12rem;
+	}
+
+	.card-category p {
+		font-size: 2rem;
+		text-align: center;
+		line-height: 1;
+	}
+
+	.card-category span {
+		font-size: 1.4rem;
+	}
+
+	.container-options {
+		align-items: center;
+	}
+
+	.container-options span {
+		text-align: center;
+		padding: 1rem 2rem;
+	}
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+	}
+
+	.gallery {
+		grid-template-rows: repeat(2, 15rem);
+	}
+
+	.container-blogs {
+		overflow: hidden;
+		grid-template-columns: 1fr 1fr;
+
+		height: 52rem;
+	}
+
+	.menu-footer {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.copyright {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+	}
+}
+
+
+/* ************ */
+/*       MEDIA QUERIES -- 468px       */
+/* ************ */
+@media (max-width: 468px) {
+	html {
+		font-size: 42.5%;
+	}
+
+	.content-banner {
+		max-width: 50rem;
+		padding: 22rem 0;
+	}
+
+	.heading-1 {
+		font-size: 2.8rem;
+	}
+
+	.card-feature {
+		flex-direction: column;
+		border-radius: 2rem;
+	}
+
+	.feature-content {
+		align-items: center;
+	}
+
+	.feature-content p {
+		font-size: 1.4rem;
+		text-align: center;
+	}
+
+	.feature-content span {
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+	.container-options span {
+		font-size: 1.8rem;
+		padding: 1rem 1.5rem;
+		font-weight: 500;
+	}
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+		gap: 1rem;
+	}
+
+	.container-img .discount {
+		font-size: 2rem;
+	}
+
+	.content-card-product h3 {
+		font-size: 2.2rem;
+	}
+
+	.gallery {
+		grid-template-rows: repeat(2, 20rem);
+	}
+
+	.blogs {
+		padding: 2rem;
+	}
+
+	.container-blogs {
+		grid-template-columns: 1fr;
+		height: 75rem;
+	}
+
+	.content-blog h3 {
+		font-size: 2.4rem;
+	}
+
+	.content-blog span {
+		font-size: 1.8rem;
+	}
+
+	.content-blog p {
+		font-size: 2.2rem;
+	}
+
+	.btn-read-more{
+		font-size: 1.8rem;
+	}
+
+	.contact-info ul,
+	.information ul,
+	.my-account ul{
+		display: none;
+	}
+
+	.contact-info {
+		align-items: center;
+	}
+
+	.menu-footer{
+		grid-template-columns: 1fr;
+	}
+
+	.content p{
+		font-size: 1.6rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
